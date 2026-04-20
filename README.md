@@ -7,6 +7,8 @@ Use Claude from inside Codex for code reviews, adversarial reviews, and delegate
 
 This plugin is for Codex users who want Claude CLI available as a first-class Codex skill surface.
 
+![Claude plugin screenshot](assets/codex-plugin-screenshot.png)
+
 ## What you get
 
 - `claude-setup` to verify Claude CLI install, auth, and runtime state
