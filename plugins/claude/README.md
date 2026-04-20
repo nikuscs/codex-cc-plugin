@@ -4,6 +4,12 @@ This plugin mirrors the core `codex-plugin-cc` workflow in the opposite directio
 Codex can call Claude CLI for setup checks, task delegation, review, status, result retrieval,
 and cancellation.
 
+## Requirements
+
+- Claude CLI installed and on `PATH`
+- Claude CLI authenticated
+- Node.js `20+`
+
 ## Install
 
 You do not need the official Codex marketplace.

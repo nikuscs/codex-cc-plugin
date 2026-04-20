@@ -18,7 +18,7 @@ This plugin is for Codex users who want Claude CLI available as a first-class Co
 
 - Claude CLI installed and on `PATH`
 - Claude CLI authenticated
-- Node.js `18.18+`
+- Node.js `20+`
 
 ## Install
 
