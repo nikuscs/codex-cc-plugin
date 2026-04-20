@@ -1,0 +1,37 @@
+{
+  "name": "codex-cc-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Use Claude Code from Codex to review code or delegate tasks with Claude CLI.",
+  "license": "MIT",
+  "bin": {
+    "ccx": "./bin/claude-codex.mjs",
+    "claude-codex": "./bin/claude-codex.mjs"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/runtime.test.mjs",
+    "lint": "oxlint --deny-warnings --node-plugin .",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "check": "bun run lint && bun run format:check && bun run test",
+    "build:cli:darwin-arm64": "bun build bin/claude-codex.mjs --compile --target=bun-darwin-arm64 --outfile dist/claude-codex-darwin-arm64",
+    "build:cli:darwin-x64": "bun build bin/claude-codex.mjs --compile --target=bun-darwin-x64 --outfile dist/claude-codex-darwin-x64",
+    "build:cli:linux-arm64": "bun build bin/claude-codex.mjs --compile --target=bun-linux-arm64 --outfile dist/claude-codex-linux-arm64",
+    "build:cli:linux-x64": "bun build bin/claude-codex.mjs --compile --target=bun-linux-x64 --outfile dist/claude-codex-linux-x64",
+    "build:cli": "mkdir -p dist && bun run build:cli:darwin-arm64 && bun run build:cli:darwin-x64 && bun run build:cli:linux-arm64 && bun run build:cli:linux-x64",
+    "release:dry-run": "bun run check && bun run build:cli",
+    "release:patch": "bun run check && npm version patch -m \"release: v%s\" && git push --follow-tags",
+    "release:minor": "bun run check && npm version minor -m \"release: v%s\" && git push --follow-tags",
+    "release:major": "bun run check && npm version major -m \"release: v%s\" && git push --follow-tags"
+  },
+  "devDependencies": {
+    "bumpp": "^10.2.3",
+    "oxfmt": "0.45.0",
+    "oxlint": "1.60.0"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "packageManager": "bun@1.2.22"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "claude",
+  "version": "0.1.0",
+  "description": "Use Claude Code from Codex to review code or delegate tasks.",
+  "author": {
+    "name": "Jon",
+    "url": "https://github.com/nikuscs"
+  },
+  "homepage": "https://github.com/nikuscs/codex-cc-plugin",
+  "repository": "https://github.com/nikuscs/codex-cc-plugin",
+  "license": "MIT",
+  "keywords": ["claude", "review", "delegation", "codex"],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "Claude",
+    "shortDescription": "Run Claude setup, review, and delegation flows",
+    "longDescription": "Use Claude CLI from Codex to run repository setup checks, delegate substantial tasks, inspect tracked jobs, and perform review or adversarial review workflows.",
+    "developerName": "Jon",
+    "category": "Coding",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://github.com/nikuscs/codex-cc-plugin",
+    "privacyPolicyURL": "https://github.com/nikuscs/codex-cc-plugin/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/nikuscs/codex-cc-plugin/blob/main/TERMS.md",
+    "defaultPrompt": [
+      "Run claude-setup for this repository",
+      "Use Claude to review the current working tree",
+      "Delegate a substantial coding task to Claude"
+    ],
+    "brandColor": "#D97706",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "screenshots": ["./assets/screenshot-1.png"]
+  }
+}
